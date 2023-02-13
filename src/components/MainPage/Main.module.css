@@ -1,0 +1,73 @@
+.mainBg {
+  width: 100vw;
+  background-image: url(../../contents/images/amusement_park.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  justify-content: center;
+}
+.mainContents {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 750px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 6.25rem 0;
+}
+.mainTitle {
+  font-family: "NexonMaplestory";
+  font-weight: bold;
+  font-size: 3.125rem;
+  text-shadow: 2px 2px 3px rgb(255, 255, 255);
+  padding-top: 50px;
+}
+.mainText {
+  font-family: "NexonLv2Gothic";
+  letter-spacing: 0.0625rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.439);
+  border-radius: 10px;
+}
+.mainText p {
+  margin: 3px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* 모바일 */
+@media (max-width: 360px) {
+  .mainBg {
+    background-position: 55%;
+  }
+  .mainContents {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  .mainTitle {
+    font-size: 1.875rem;
+    padding: 50px 40px;
+    width: 100vw;
+    letter-spacing: 1px;
+  }
+  .mainText {
+    font-size: 0.75rem;
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.439);
+    border-radius: 5px;
+    padding: 10px 0;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+  }
+}

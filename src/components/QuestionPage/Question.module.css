@@ -1,0 +1,29 @@
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 65vw;
+  height: 25vh;
+  font-size: 2em;
+  margin: 15vh 0 9vh 0;
+  padding: 1em;
+  background-color: aliceblue;
+  box-shadow: rgb(175 175 175) 5px 5px 20px;
+  border-radius: 20px;
+  opacity: 95%;
+}
+
+.questionImg {
+  width: 40vw;
+  height: 50vh;
+  margin: 8% 0 6% 0;
+}
+
+@media (max-width: 320px) {
+  .question {
+    width: 80vw;
+    height: 30vh;
+    font-size: 20px;
+  }
+}

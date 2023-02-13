@@ -1,0 +1,36 @@
+.answerButton {
+  height: 5em;
+  width: 35vw;
+  border: 0;
+  margin: 0.5vh 1em 2vh 1em;
+  background-color: burlywood;
+  color: #fff;
+  background-color: #5d39ba;
+  opacity: 98%;
+  border-radius: 0.5rem;
+  font-size: 20px;
+}
+
+.answerButton:hover {
+  color: #000;
+  background-color: #ff58b8;
+}
+
+.answerImg {
+  height: 20vh;
+  width: 25vw;
+  margin: 1em 1em 1em 1em;
+}
+
+@media (max-width: 320px) {
+  .answerButton {
+    font-size: 15px;
+    width: 72vw;
+  }
+  .answerImg {
+    margin: 1em 1em 1em 1em;
+
+    width: 30vw;
+    height: 25vh;
+  }
+}

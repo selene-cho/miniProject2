@@ -1,0 +1,49 @@
+.goMainBtn {
+  position: absolute;
+  margin: 30px;
+}
+
+.questionPage {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-image: url(../../contents/images/bg.png);
+  background-color: #c4f4fe;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 90%;
+}
+
+.pageFlex {
+  display: flex;
+}
+
+.pageNone {
+  display: none;
+}
+
+.questionBox {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.questionBox:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionBox:nth-child(6) img {
+  width: 20vw;
+  height: 40vh;
+}
+
+.lists {
+  padding: 0;
+  height: 100vh;
+  width: 80%;
+  text-align: center;
+  margin-top: 1vh;
+}
