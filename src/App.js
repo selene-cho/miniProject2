@@ -408,7 +408,7 @@ function App() {
 
           {/* result(진행도)가 10일때 결과페이지 보여주기  */}
           {result === Data.length ? (
-            <Route path="/test" element={<ResultPage />} />
+            <Route path="/test" element={<ResultPage frontResult={frontResult} backResult={backResult}/>} />
           ) : (
             false
           )}
