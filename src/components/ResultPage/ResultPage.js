@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import styles from "./ResultPage.module.css";
 import ResultList from "./Result_list";
 import Spinner from "../../contents/images/loading_img.gif";
+import OtherPopup from "./OtherPopup";
+import KakaoShareButton from "./KakaoShareButton";
+import UserNum from "./UserNum";
+
 // import OtherResult from "./otherResult";
 const ResultPage = ({ frontResult, backResult }) => {
   /*기준을 임의로 잡았습니다. 수정가능 
@@ -20,7 +24,7 @@ const ResultPage = ({ frontResult, backResult }) => {
   const [Type, setType] = useState("front");
   const [Num, setNum] = useState(0);
   const [Describtion, setDescription] = useState([]);
-  const [Other, setOther] = useState([]);
+
   // 로딩시간
   useEffect(() => {
     // 기준1
@@ -42,18 +46,15 @@ const ResultPage = ({ frontResult, backResult }) => {
   useEffect(
     () => {
       //기준2
-      if (Num >= 16) {
+      if (Num >= 8) {
         setData(ResultList[Type][2]);
-        setOther([0, 1]);
-      } else if (Num >= 8) {
+      } else if (Num >= 5) {
         setData(ResultList[Type][1]);
-        setOther([0, 2]);
       } else {
         setData(ResultList[Type][0]);
-        setOther([1, 2]);
       }
     },
-    [Type]
+    [Loading]
   );
   useEffect(
     () => {
@@ -73,9 +74,7 @@ const ResultPage = ({ frontResult, backResult }) => {
         <div className={styles.ResultContents}>
           <h1 className={styles.ResultTitle}>테스트 결과</h1>
           <div className={styles.ResultText}>
-            <h2>
-              {Data.TypeName}
-            </h2>
+            <h2>{Data.TypeName}</h2>
             {Describtion.map(describetion => {
               return (
                 <p>
@@ -83,12 +82,10 @@ const ResultPage = ({ frontResult, backResult }) => {
                 </p>
               );
             })}
-          </div>
-          <div className={styles.ResultContents}>
-            <h1 className={styles.ResultTitle}>다른 결과 보기</h1>
-            <div className={styles.ResultText}>
-              {/* <OtherResult other={Other} type={Type} /> */}
-            </div>
+            <OtherPopup />
+            <KakaoShareButton />
+            <h1>카카오톡 공유하기</h1>
+            참여자수 : <UserNum />
           </div>
 
           <div className={styles.footer} />
