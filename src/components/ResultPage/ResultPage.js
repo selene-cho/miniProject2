@@ -1,9 +1,7 @@
+import { useEffect } from "react";
+
 const ResultPage = () => {
-  return (
-    <>
-      <p>Result Page</p>
-    </>
-  );
+  return <></>;
 };
 
 export default ResultPage;

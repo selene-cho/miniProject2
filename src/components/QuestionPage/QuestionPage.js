@@ -7,8 +7,9 @@ import Question from "./Question";
 const QuestionPage = ({ data, tendencyData }) => {
   /**진행도 프론트데이터 백엔드데이터 */
   const [progress, setProgress] = useState(0);
-  const [front, setFront] = useState(0);
-  const [back, setBack] = useState(0);
+  const [front, setFront] = useState(1);
+  const [back, setBack] = useState(1);
+  const [score, setScore] = useState(0);
 
   /**답변 클릭시 로직 */
   function answerHandler({ target }) {
@@ -18,8 +19,10 @@ const QuestionPage = ({ data, tendencyData }) => {
     setProgress((progress) => progress + 1);
     if (type === "front") {
       setFront((front) => front + 1);
-    } else {
+    } else if (type === "back") {
       setBack((back) => back + 1);
+    } else if (type === "1") {
+      setScore((score) => score + 1);
     }
 
     /** 클릭한 창 닫고 다음 창 display flex해주기 */
@@ -32,6 +35,7 @@ const QuestionPage = ({ data, tendencyData }) => {
   /**쌓아준 답변데이터 객체로 만들어주기 */
   const newAnswerData = {
     progress: progress,
+    score: score,
     front: front,
     back: back,
   };
@@ -41,6 +45,8 @@ const QuestionPage = ({ data, tendencyData }) => {
     tendencyData(newAnswerData);
     return () => {};
   }, [newAnswerData]);
+
+  console.log(data);
 
   return (
     <>

@@ -7,7 +7,7 @@
   display: flex;
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 120vh;
   background-image: url(../../contents/images/bg.png);
   background-color: #c4f4fe;
   background-repeat: no-repeat;
@@ -32,7 +32,6 @@
 }
 .questionBox:nth-child(1) {
   display: flex;
-  flex-direction: column;
 }
 
 .questionBox:nth-child(6) img {
@@ -42,8 +41,7 @@
 
 .lists {
   padding: 0;
-  height: 100vh;
   width: 80%;
   text-align: center;
-  margin-top: 1vh;
+  margin-top: 7vh;
 }
