@@ -14,7 +14,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     font-size: 1.25rem;
-    font-family: 'NexonLv2Gothic','Montserrat', sans-serif;
   }
   button {
     all: unset;

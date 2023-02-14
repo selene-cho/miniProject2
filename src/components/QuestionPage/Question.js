@@ -3,8 +3,15 @@ import styles from "./Question.module.css";
 const Question = ({ d }) => {
   return (
     <>
-      {d.question.includes("http") ? (
-        <img src={d.question} className={styles.questionImg} alt="" />
+      {d.question[0].includes("imageData") ? (
+        <>
+          <div>{d.question[1]}</div>
+          <img
+            src={process.env.PUBLIC_URL + d.question[0]}
+            className={styles.questionImg}
+            alt=""
+          />
+        </>
       ) : (
         <div className={styles.question}>{d.question}</div>
       )}
