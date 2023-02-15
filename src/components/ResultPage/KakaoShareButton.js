@@ -56,7 +56,7 @@ const KakaoShareButton = () => {
         {/* Kakao share button */}
         <button id="kakao-link-btn">
           <img
-            src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+            src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_small.png"
             alt="kakao-share-icon"
           />
         </button>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useAsyncError } from "react-router-dom";
 import styles from "./QuestionPage.module.css";
 import AnswerBtn from "./AnswerBtn";
 import Question from "./Question";
@@ -16,7 +16,7 @@ const QuestionPage = ({ data, tendencyData }) => {
     const type = target.value;
 
     /**답변에 대한 데이터 쌓아주기 */
-    setProgress((progress) => progress + 1);
+    setProgress(progress => progress + 1);
     if (type === "front") {
       setFront((front) => front + 1);
     } else if (type === "back") {
@@ -42,13 +42,17 @@ const QuestionPage = ({ data, tendencyData }) => {
     score: score,
     front: front,
     back: back,
+    score: score
   };
 
   /**상위 컴포넌트에 변경된 값 보내주기 */
-  useEffect(() => {
-    tendencyData(newAnswerData);
-    return () => {};
-  }, [newAnswerData]);
+  useEffect(
+    () => {
+      tendencyData(newAnswerData);
+      return () => {};
+    },
+    [newAnswerData]
+  );
 
   console.log(data);
 
