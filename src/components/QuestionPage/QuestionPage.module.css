@@ -121,7 +121,20 @@ section {
 
 .questionBox:nth-child(1) {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 55%;
+  padding: 46px 0;
+  /* bottom: 0;
+  left: 0; */
+  /* padding: 50px; */
+  text-align: center;
+  background-color: #a0c3d2;
+}
+.questionBox:nth-child(1) {
+  display: flex;
 }
 .questionBox:nth-child(6) img {
   width: 20vw;
@@ -201,4 +214,34 @@ section {
     margin: 15px;
     padding: 20px 15px;
   }
+}
+
+.questionBox:nth-child(12) div button:nth-child(1) {
+  box-shadow: 0 0 0 1px rgb(255, 220, 64) inset,
+    0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 15px 0 0 #7c5c3f,
+    0 15px 0 1px rgba(0, 0, 0, 0.4), 0 15px 15px 1px rgba(0, 0, 0, 0.5);
+  background-color: rgb(255, 210, 64);
+}
+.questionBox:nth-child(12) div button:nth-child(2) {
+  box-shadow: 0 0 0 1px rgb(255, 220, 64) inset,
+    0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 15px 0 0 #7c5c3f,
+    0 15px 0 1px rgba(0, 0, 0, 0.4), 0 15px 15px 1px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to right,
+    rgb(31, 102, 152),
+    rgb(31, 102, 152, 0),
+    rgb(255, 210, 64)
+  );
+}
+.questionBox:nth-child(12) div button:nth-child(3) {
+  box-shadow: 0 0 0 1px rgb(0, 208, 255) inset,
+    0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 15px 0 0 #3f5e7c,
+    0 15px 0 1px rgba(0, 0, 0, 0.4), 0 15px 15px 1px rgba(0, 0, 0, 0.5);
+  background-color: rgb(0, 208, 255);
+}
+.questionBox:nth-child(12) div button:nth-child(4) {
+  box-shadow: 0 0 0 1px tomato inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+    0 15px 0 0 #7c3f3f, 0 15px 0 1px rgba(0, 0, 0, 0.4),
+    0 15px 15px 1px rgba(0, 0, 0, 0.5);
+  background-color: tomato;
 }

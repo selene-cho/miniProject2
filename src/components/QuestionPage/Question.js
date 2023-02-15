@@ -1,4 +1,6 @@
 import styles from "./Question.module.css";
+import styled from "styled-components";
+// import a from "../../contents/images/heart.png";
 
 const Question = ({ d }) => {
   return (

@@ -3,13 +3,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./components/MainPage/Main";
 import Routing from "./screens/Routing";
 import ResultPage from "./components/ResultPage/ResultPage";
-
 import { GlobalStyles } from "./contents/styles";
 
 function App() {
   const [result, setResult] = useState(0);
   const [frontResult, setFrontResult] = useState(0);
   const [backResult, setBackResult] = useState(0);
+  const [scoreResult, setScoreResult] = useState(0);
 
   /** 질문 답변 임의 데이터 */
   const Data = [
@@ -82,6 +82,7 @@ function App() {
       answerData: [
         {
           answer: "될 수 있으면 혼자 or 한 명이랑은 괜찮아",
+
           type: "back",
         },
         {
@@ -257,7 +258,6 @@ function App() {
         },
         {
           answer: "/imageData/img10.jpeg",
-
           type: "1",
         },
         {
@@ -272,7 +272,6 @@ function App() {
         "문제 상황에 부딪혔을 때,\n스트레스를 얼마나 받는지 수치로 선택해주세요",
       answerData: [
         {
-          answer: "1\n지금 당장의 상황에 대한 스트레스가 더 높음",
           type: "1",
         },
         {
@@ -335,20 +334,32 @@ function App() {
     },
   ];
 
+  Data[0].question.replace(/\n/g, `<br/>`);
+  // console.log(Data[0].question);
+
   /**답변한 데이터(data : 현재까지 답변한 답 수, front : 현재까지 답한 프론트 답, back : 현재까지 답한 백엔드 답) */
   const tendencyData = (data) => {
     setResult(data.progress);
+    setScoreResult(data.score);
     setFrontResult(data.front);
     setBackResult(data.back);
   };
 
   console.log(
-    `"data" : ${result}, "front" : ${frontResult}, "back" : ${backResult}`
+    `"data" : ${result}, "score" : ${scoreResult} "front" : ${frontResult}, "back" : ${backResult}`
   );
 
   return (
     /* result(진행도)가 10일때 프로그래스바 & 질문페이지 없애기  */
     <>
+      <audio
+        src="./샛별프로젝트-AM 5.00 (bpm108).mp3"
+        autoPlay
+        loop
+        id="myAudio"
+      >
+        오디오 지원되지 않는 브라우저
+      </audio>
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
