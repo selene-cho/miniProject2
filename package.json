@@ -34,6 +34,7 @@
       "not dead",
       "not op_mini all"
     ],
+     "homepage":"https://superlative-crisp-2d6988.netlify.app",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",

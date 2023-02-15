@@ -10,7 +10,7 @@ function App() {
   const [result, setResult] = useState(0);
   const [frontResult, setFrontResult] = useState(0);
   const [backResult, setBackResult] = useState(0);
-  const [Score, setScore] =useState(8);
+  const [Score, setScore] =useState(0);
 
   /** 질문 답변 임의 데이터 */
   const Data = [
@@ -342,10 +342,11 @@ function App() {
     setResult(data.progress);
     setFrontResult(data.front);
     setBackResult(data.back);
+    setScore(data.score)
   };
 
   console.log(
-    `"data" : ${result}, "front" : ${frontResult}, "back" : ${backResult}`
+    `"data" : ${result}, "score" : ${Score},front" : ${frontResult}, "back" : ${backResult}`
   );
 
   return (

@@ -5,67 +5,72 @@ import Spinner from "../../contents/images/Loading_img.gif";
 import OtherPopup from "./OtherPopup";
 import KakaoShareButton from "./KakaoShareButton";
 import UserNum from "./UserNum";
-
+import CallToAction from "./CallToAction";
 import {
   FacebookShareButton,
   FacebookIcon,
   TwitterIcon,
   TwitterShareButton
 } from "react-share";
+import { Link } from "react-router-dom";
 
 // import OtherResult from "./otherResult";
 const ResultPage = ({ frontResult, backResult, score }) => {
   const [Loading, setLoading] = useState(true);
   const [Data, setData] = useState({ Describtion: "" });
-  const [Type, setType] = useState("front");
-  const [Num, setNum] = useState(0);
+  const [Type, setType] = useState("none");
+  // const [Num, setNum] = useState(0);
   const [Describtion, setDescription] = useState([]);
   const [Img, setImg] = useState("");
 
   // 로딩시간
-  useEffect(() => {
-    // 기준1
-    console.log(score);
-    if (score < 5) {
-      setType("none");
-      setData(ResultList[Type][0]);
-    } else if (score < 8) {
-      setNum(score);
-      if (frontResult > backResult) {
-        setType("front");
+  useEffect(
+    () => {
+      // 기준1
+      console.log(score);
+      if (score < 5) {
+        setType("none");
         setData(ResultList[Type][0]);
-      } else if (frontResult < backResult) {
-        setType("back");
-        setData(ResultList[Type][0]);
+      } else if (score < 8) {
+        setNum(score);
+        if (frontResult > backResult) {
+          setType("front");
+          setData(ResultList[Type][0]);
+        } else if (frontResult < backResult) {
+          setType("back");
+          setData(ResultList[Type][0]);
+        } else {
+          setType("full");
+          setData(ResultList[Type][1]);
+        }
       } else {
-        setType("full");
-        setData(ResultList[Type][1]);
+        setNum(score);
+        if (frontResult > backResult) {
+          setType("front");
+          setData(ResultList[Type][1]);
+        } else if (frontResult < backResult) {
+          setType("back");
+          setData(ResultList[Type][1]);
+        } else {
+          setType("full");
+          setData(ResultList[Type][2]);
+        }
       }
-    } else {
-      setNum(score);
-      if (frontResult > backResult) {
-        setType("front");
-        setData(ResultList[Type][1]);
-      } else if (frontResult < backResult) {
-        setType("back");
-        setData(ResultList[Type][1]);
-      } else {
-        setType("full");
-        setData(ResultList[Type][2]);
-      }
-    }
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  }, []);
+      setTimeout(() => {
+        setLoading(false);
+      }, 5000);
+    },
+    [Data]
+  );
 
   useEffect(
     () => {
       setDescription(Data.Describtion.split("/"));
       setImg(Data.img);
+      console.log(Img);
     },
-    [Type]
+    [Type, Img]
   );
   const currentUrl = window.location.href;
 
@@ -85,7 +90,14 @@ const ResultPage = ({ frontResult, backResult, score }) => {
           styles.ResultBody //결과창
         }
       >
-        <div className={styles.Rsultside} />
+        <div className={styles.Rsultside}>
+          <Link to="/">
+            <a href="" title="Go to Main" className={styles.goMainBtn}>
+              <span className={styles.goMainBtnTop}>Main</span>
+              <span className={styles.goMainBtnBottom}>처음부터!</span>
+            </a>
+          </Link>
+        </div>
         <div className={styles.ResultIMG}>
           <div className={styles.ResultContents}>
             <div className={styles.img_name}>
@@ -114,7 +126,6 @@ const ResultPage = ({ frontResult, backResult, score }) => {
                 })}
               </div>
             </div>
-
             <div className={styles.Link}>
               <OtherPopup />
               <KakaoShareButton />
@@ -128,9 +139,9 @@ const ResultPage = ({ frontResult, backResult, score }) => {
                 참여자수 : <UserNum />
               </p>
             </div>
+            <CallToAction />
           </div>
         </div>
-
         <div className={styles.Resultside} />
       </div>;
 };
