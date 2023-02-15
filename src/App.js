@@ -15,38 +15,38 @@ function App() {
   const Data = [
     {
       id: 1,
-      question: "수업중 오타투성이인 강사님의 코드!\n당신의 생각은???",
+      question: "수업중 오타투성이인 강사님의 코드!\n무슨 생각이 드나요???💭",
       answerData: [
         {
-          answer: "오타가 너무 신경 쓰여 집중이 안된다,,,,",
+          answer: "오타 너무 신경쓰여.. 집중 안돼🫣",
           type: "front",
         },
-        { answer: "그런거 신경 안쓴다,, 일단 진도나 따라가야지", type: "back" },
+        { answer: "그런거 신경안씀. 일단 진도나 따라가야지🫥", type: "back" },
       ],
     },
     {
       id: 2,
-      question: ["/imageData/img1.png", "하트의 위치는 몇번째인가??"],
+      question: "하트는 몇 번째에 있나요?\n⭐⭐❤️⭐⭐",
       answerData: [
         {
-          answer: "i=1",
+          answer: "0번째",
           type: "front",
         },
-        { answer: "i=2", type: "back" },
-        { answer: "i=3", type: "front" },
-        { answer: "i=4", type: "front" },
+        { answer: "1번째", type: "front" },
+        { answer: "2번째", type: "back" },
+        { answer: "3번째", type: "front" },
       ],
     },
     {
       id: 3,
       question:
-        "프로젝트를 마치고 친구에게 자랑하는 도중,\n내 프로젝트를 보기위해 주변 사람들에게 둘러쌓이고 말았다. 이 때 당신의 속마음은??",
+        "프로젝트를 마치고 친구에게 자랑하는 도중,\n내 프로젝트를 보기위해 주변 사람들에게 둘러쌓이고 말았다.\n이 때 당신의 속마음은??",
       answerData: [
         {
-          answer: "아아,,, 부끄러운데 이따 보여줄까...?",
+          answer: "아아,,, 부끄러운데 이따 보여줄까...?😳",
           type: "back",
         },
-        { answer: "이런 관심??? 나쁘지 않아,,, 오히려 좋아^^", type: "front" },
+        { answer: "이런 관심??? 나쁘지 않아,,, 오히려 좋아!😚", type: "front" },
       ],
     },
     {
@@ -54,12 +54,12 @@ function App() {
       question: ["/imageData/img2.png", "다음 빈칸에 들어갈 말은?!"],
       answerData: [
         {
-          answer: "1. HTML",
+          answer: "HTML",
           type: "front",
         },
-        { answer: "2. Python", type: "back" },
-        { answer: "3. JavaScript", type: "front" },
-        { answer: "4. TypeScript", type: "front" },
+        { answer: "Python", type: "back" },
+        { answer: "JavaScript", type: "front" },
+        { answer: "TypeScript", type: "front" },
       ],
     },
     {
@@ -67,18 +67,21 @@ function App() {
       question: "빠른 트렌드 변화에 대한 당신의 생각은???",
       answerData: [
         {
-          answer: "너무 빠른 변화는 따라가기 힘들다ㅠㅠ 싫다!!",
+          answer: "너무 빠른 변화는 따라가기 힘들어ㅠㅠ 안정적인게 좋아!!",
           type: "back",
         },
-        { answer: "내가 또 트렌드를 잘 따라가지 ㅎㅎ", type: "front" },
+        {
+          answer: "새로운건 늘 짜릿해!! 내가 또 트렌드는 잘 따라가지 ㅎㅎ",
+          type: "front",
+        },
       ],
     },
     {
       id: 6,
-      question: "프로젝트 수행 하기위한 팀원은 어느정도가 적당한가?!",
+      question: "프로젝트를 수행할 때,\n팀원은 몇 명이 적당하다고 생각하나요?",
       answerData: [
         {
-          answer: "될 수 있으면 혼자 or 한명까지,,",
+          answer: "될 수 있으면 혼자 or 한 명이랑은 괜찮아",
           type: "back",
         },
         {
@@ -89,7 +92,7 @@ function App() {
     },
     {
       id: 7,
-      question: "영화를 만들기 위해 당신이 더 흥미 있는 것은??",
+      question: "영화를 제작한다면,\n어느 역할에 더 흥미가 있나요??",
       answerData: [
         {
           answer: "작품을 빛낼 배우",
@@ -101,20 +104,20 @@ function App() {
     {
       id: 8,
       question:
-        "2022년 10월 데이터 센터 화재로 일어난 카카오 서비스 장애 사건…\n데이터 센터의 위치는?",
+        "2022년 10월,\n데이터 센터 화재로 일어난 카카오 서비스 장애 사건…🥲\n데이터 센터의 위치는?",
       answerData: [
         {
-          answer: "1. 구로",
+          answer: "구로",
           type: "front",
         },
-        { answer: "2. 판교", type: "back" },
-        { answer: "3. 부산", type: "front" },
-        { answer: "4. 강남", type: "front" },
+        { answer: "판교", type: "back" },
+        { answer: "부산", type: "front" },
+        { answer: "강남", type: "front" },
       ],
     },
     {
       id: 9,
-      question: "신입 개발자가 주의해야 할 것이 아닌 것은?",
+      question: "신입 개발자가 주의해야 할 사항이 아닌 것은?",
       answerData: [
         {
           answer: "1. 고민하다가 모르겠어도 사수에게 질문 금지",
@@ -137,18 +140,18 @@ function App() {
 
       answerData: [
         {
-          answer: "1. 쯧쯧쯧,,, 세금 낭비",
+          answer: "쯧쯧쯧,,, 세금 낭비💸",
           type: "0",
         },
         {
-          answer: "2. 이게 웬 갑분육교;;;",
+          answer: "이게 웬 갑분육교;;🫤",
           type: "0",
         },
         {
-          answer: "3. 운동하기 좋겠다.",
+          answer: "운동하기 좋겠다!!🏃🏻‍♂️",
           type: "0",
         },
-        { answer: "4. 그렇다고 없애면 버그가 생길지도..??", type: "1" },
+        { answer: "그렇다고 없애면 버그가 생길지도..??🤔", type: "1" },
       ],
     },
     {
@@ -168,36 +171,36 @@ function App() {
           type: "1",
         },
         {
-          answer: "다들 쓰니까!",
+          answer: "다들 쓰니까!!",
           type: "0",
         },
       ],
     },
     {
       id: 12,
-      question: "연결 관계가 다른 것은?",
+      question: "버튼의 색깔과 언어의 연결관계가 다른 하나를 고르세요",
       answerData: [
         {
-          answer: "노란색 - Javascript",
+          answer: "Javascript",
           type: "0",
         },
         {
-          answer: "파랑/노랑 - Python",
+          answer: "React",
           type: "0",
         },
         {
-          answer: "하늘 - React",
+          answer: "Python",
           type: "0",
         },
         {
-          answer: "빨강 - HTML",
+          answer: "Django",
           type: "1",
         },
       ],
     },
     {
       id: 13,
-      question: "국내 개발 컨퍼런스 중 틀린 것은?",
+      question: "국내 개발 컨퍼런스 중 이름이 틀린 것은?",
       answerData: [
         {
           answer: "우아한 형제들 : 우아콘",
@@ -219,19 +222,18 @@ function App() {
     },
     {
       id: 14,
-      question: "다음 단어를 보고 생각나는 이미지를 고르세요.\n<코드>",
+      question: '다음 단어를 보고 생각나는 이미지를 고르세요.\n"코드"',
       answerData: [
         {
-          answer: "/imageData/img4.jpeg",
-
+          answer: "/imageData/img4.jpg",
           type: "0",
         },
         {
-          answer: "/imageData/img5.png",
+          answer: "/imageData/img5.jpg",
           type: "0",
         },
         {
-          answer: "/imageData/img6.png",
+          answer: "/imageData/img6.jpg",
           type: "1",
         },
         {
@@ -254,7 +256,7 @@ function App() {
           type: "0",
         },
         {
-          answer: "/imageData/img10.png",
+          answer: "/imageData/img10.jpeg",
 
           type: "1",
         },
@@ -267,10 +269,10 @@ function App() {
     {
       id: 16,
       question:
-        "문제 상황에 부딪혔을 때, 스트레스를 얼마나 받는지 수치로 선택해주세요",
+        "문제 상황에 부딪혔을 때,\n스트레스를 얼마나 받는지 수치로 선택해주세요",
       answerData: [
         {
-          answer: "1",
+          answer: "1\n지금 당장의 상황에 대한 스트레스가 더 높음",
           type: "1",
         },
         {
@@ -282,7 +284,7 @@ function App() {
           type: "1",
         },
         {
-          answer: "4",
+          answer: "4\n문제해결에 대한 성취감이 더 높음",
           type: "1",
         },
       ],
@@ -296,11 +298,11 @@ function App() {
           type: "0",
         },
         {
-          answer: "텍스트를 이해하고 답변하는 AI",
+          answer: "텍스트를 이해하고 답변하는 AI이다.",
           type: "1",
         },
         {
-          answer: "미국의 변호사, 의사, MBA 졸업 시험 등을 통과 했다.",
+          answer: "미국의 변호사, 의사, MBA 졸업 시험 등을 통과했다.",
           type: "0",
         },
         {
@@ -315,7 +317,6 @@ function App() {
       answerData: [
         {
           answer: "/imageData/img12.jpeg",
-
           type: "1",
         },
         {
@@ -324,12 +325,10 @@ function App() {
         },
         {
           answer: "/imageData/img14.jpeg",
-
           type: "1",
         },
         {
           answer: "/imageData/img15.jpeg",
-
           type: "1",
         },
       ],
@@ -387,196 +386,3 @@ function App() {
 }
 
 export default App;
-
-// import { useState } from "react";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Main from "./components/Main";
-// import Routing from "./UI/Routing";
-// import ResultPage from "./components/ResultPage";
-
-// import { GlobalStyles } from "./contents/styles";
-
-// function App() {
-//   const [result, setResult] = useState(0);
-//   const [frontResult, setFrontResult] = useState(0);
-//   const [backResult, setBackResult] = useState(0);
-
-//   /** 질문 답변 임의 데이터 */
-//   const Data = [
-//     {
-//       id: 1,
-//       question: "question1",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 2,
-//       question: "question2",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 3,
-//       question: "question3",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 4,
-//       question: "question4",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 5,
-//       question: "question5",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 6,
-//       question: "question6",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 7,
-//       question: "question7",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 8,
-//       question: "question8",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 9,
-//       question:
-//         "https://img2.quasarzone.com/editor/2022/01/26/23418c3a40943f6dd3c51249c0edd9bd.png",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 10,
-//       question: "question10",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//   ];
-
-//   /**답변한 데이터(data : 현재까지 답변한 답 수, front : 현재까지 답한 프론트 답, back : 현재까지 답한 백엔드 답) */
-//   const tendencyData = (data, front, back) => {
-//     console.log(`"data" : ${data}, "front" : ${front}, "back" : ${back}`);
-//     setResult(data);
-//     setFrontResult(front);
-//     setBackResult(back);
-//   };
-
-//   return (
-//     // <>
-//     //   {/* result(진행도)가 10일때 프로그래스바 & 질문페이지 없애기  */}
-//     // {result === 10 ? (
-//     //   false
-//     // ) : (
-//     //   <>
-//     //     <ProgressBar result={result} />
-//     //     <QuestionPage data={Data} tendencyData={tendencyData} />
-//     //   </>
-//     // )}
-
-//     //   {/* result(진행도)가 10일이고 front답 수와 back답 수에 따른 페이지 보여주기  */}
-//     //   {result === 10 && frontResult > 5 ? (
-//     //     <div>front!!!!</div>
-//     //   ) : result === 10 && backResult > 5 ? (
-//     //     <div>backEnd!!!!!</div>
-//     //   ) : result === 10 ? (
-//     //     <div>none</div>
-//     //   ) : (
-//     //     false
-//     //   )}
-//     // </>
-//     <>
-//       <GlobalStyles />
-//       <BrowserRouter>
-//         <Routes>
-//           <Route path="/" element={<Main />} />
-//           {result === 10 ? (
-//             false
-//           ) : (
-//             <Route
-//               path="/test"
-//               element={
-//                 <Routing
-//                   result={result}
-//                   data={Data}
-//                   tendencyData={tendencyData}
-//                 />
-//               }
-//             />
-//           )}
-
-//           {/* result(진행도)가 10일때 프로그래스바 & 질문페이지 없애기  */}
-//           {result === 10 ? (
-//             <Route path="/test" element={<ResultPage />} />
-//           ) : (
-//             false
-//           )}
-//         </Routes>
-//       </BrowserRouter>
-//     </>
-//   );
-// }
-
-// export default App;

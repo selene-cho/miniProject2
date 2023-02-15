@@ -8,22 +8,20 @@ export const GlobalStyles = createGlobalStyle`
   ${reset}
   * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
   input {
     all: unset;
   }
-  body {
-    font-size: 1.25rem;
-  }
   button {
     all: unset;
   }
-  ol, ul {
+  li {
     list-style: none;
   }
-
-  @import url("https://fonts.googleapis.com/css2?family=Jua&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-  @import url("https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css");
-  @import url("https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css");
-  @import url("https://webfontworld.github.io/nongshim/Ansungtangmyun.css");
+  #root {
+    white-space: pre-line;
+  }
 `;

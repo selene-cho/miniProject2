@@ -45,9 +45,10 @@
 /* 테스트 하러가기 버튼 - popup open */
 .popupBtn {
   text-decoration: none;
-  width: 130px;
-  height: 40px;
+  width: 15vw;
+  height: 5vh;
   margin: 0 auto;
+  font-size: 1.25rem;
 }
 .popupBtn button {
   position: relative;

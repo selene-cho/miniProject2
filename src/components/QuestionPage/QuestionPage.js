@@ -23,8 +23,12 @@ const QuestionPage = ({ data, tendencyData }) => {
     }
 
     /** 클릭한 창 닫고 다음 창 display flex해주기 */
-    const questionData = target.parentElement.parentNode;
-    const questionTest = target.parentElement.parentElement.nextSibling;
+    const questionData = target.parentElement.parentElement.parentNode;
+    const questionTest =
+      target.parentElement.parentElement.parentElement.nextSibling;
+    console.log("1", questionData);
+    console.log("2", questionTest);
+
     questionData.style.display = "none";
     questionTest.style.display = "flex";
   }
@@ -45,7 +49,7 @@ const QuestionPage = ({ data, tendencyData }) => {
   return (
     <div className={styles.questionPage}>
       {/* 메인이동 버튼 */}
-      <header className={styles.header}>
+      <header>
         <Link to="/">
           <a href="" title="Go to Main" className={styles.goMainBtn}>
             <span className={styles.goMainBtnTop}>Main</span>
@@ -55,22 +59,27 @@ const QuestionPage = ({ data, tendencyData }) => {
       </header>
 
       {/* 질문페이지 구현 */}
-      <section className={styles.question}>
+      <section>
         {data.map((d) => {
           return (
             <div className={styles.questionBox} key={d.id}>
-              <Question d={d} />
+              <div className={styles.questionTitle}>
+                <Question d={d} />
+              </div>
+
               {/* 응답 버튼 */}
-              <div className={styles.lists}>
-                {d.answerData.map((a) => {
-                  return (
-                    <AnswerBtn
-                      key={Math.random()}
-                      a={a}
-                      answerHandler={answerHandler}
-                    />
-                  );
-                })}
+              <div className={styles.listsBox}>
+                <div className={styles.lists}>
+                  {d.answerData.map((a) => {
+                    return (
+                      <AnswerBtn
+                        key={Math.random()}
+                        a={a}
+                        answerHandler={answerHandler}
+                      />
+                    );
+                  })}
+                </div>
               </div>
             </div>
           );
