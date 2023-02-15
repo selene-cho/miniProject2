@@ -43,8 +43,12 @@
   justify-content: center;
 }
 
+/* 태블릿 */
+@media (max-width: 769px) {
+}
+
 /* 모바일 */
-@media (max-width: 360px) {
+@media (max-width: 376px) {
   .mainBg {
     background-position: 55%;
   }

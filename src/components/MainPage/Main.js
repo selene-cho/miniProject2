@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import CountUser from "./CountUser";
 import styles from "./Main.module.css";
 import Popup from "./Popup";
 

@@ -1,19 +1,25 @@
 import styled from "styled-components";
 import horse from "../contents/images/horse.png";
 
-const ProgressContainer = styled.div`
-  margin-top: 35px;
+const ProgressBox = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 120px;
+  background-color: #eac7c7;
+`;
+const Progress = styled.div`
   position: absolute;
   width: 70vw;
   height: 3vh;
   border-radius: 10px;
   background-color: #80cbc4;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-  left: 14.6%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 99;
 `;
-
-const Progress = styled.span`
+const ProgressImg = styled.span`
   background: url(${horse});
   background-size: 100% 100%;
   height: 50px;
@@ -23,12 +29,8 @@ const Progress = styled.span`
   top: -1rem;
   position: absolute;
   transition: all 0.6s ease-in-out 0s;
-
-  // background: purple;
-  // width: ${(props) => props.width};
 `;
-
-const ProgressImg = styled.p`
+const ProgressNum = styled.p`
   margin-top: 12px;
   text-align: center;
   font-size: 24px;
@@ -43,11 +45,13 @@ const ProgressBar = ({ result, data }) => {
   const barWidth = result;
 
   return (
-    <ProgressContainer>
-      <Progress width={(barWidth / data.length) * 100 + "%"}>
-        <ProgressImg>{barWidth}</ProgressImg>
+    <ProgressBox>
+      <Progress>
+        <ProgressImg width={(barWidth / data.length) * 100 + "%"}>
+          <ProgressNum>{barWidth}</ProgressNum>
+        </ProgressImg>
       </Progress>
-    </ProgressContainer>
+    </ProgressBox>
   );
 };
 

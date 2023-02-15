@@ -5,7 +5,7 @@ const Question = ({ d }) => {
     <>
       {d.question[0].includes("imageData") ? (
         <>
-          <div>{d.question[1]}</div>
+          <div className={styles.questionImgTitle}>{d.question[1]}</div>
           <img
             src={process.env.PUBLIC_URL + d.question[0]}
             className={styles.questionImg}
