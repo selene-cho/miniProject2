@@ -29,6 +29,24 @@
   letter-spacing: 1.5px;
 }
 
+/* 태블릿 */
+@media (max-width: 768px) {
+  .question {
+    width: 80vw;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border: 5px solid #65789a;
+  }
+  .questionImgTitle {
+    margin-top: 20vh;
+    font-size: 1.25rem;
+  }
+  .questionImg {
+    margin: 0;
+  }
+}
+
+/* 핸드폰 */
 @media (max-width: 376px) {
   .question {
     width: 80vw;

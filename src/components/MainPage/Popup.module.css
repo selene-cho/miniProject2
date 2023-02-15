@@ -12,23 +12,23 @@
 }
 .popupContent {
   background-color: white;
-  padding: 20px;
+  padding: 50px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 191, 101, 0.792);
-  font-size: 1rem;
+  font-size: 1.25rem;
   letter-spacing: 1px;
 }
 .content {
   margin: 20px;
 }
 .popupContent .startBtn button {
-  width: 150px;
+  /* width: 30vw; */
   height: 40px;
-  margin: 0 auto;
-  margin-bottom: 13px;
-  padding: 3px 15px;
+  margin: 15px auto;
+  padding: 5px 40px;
   background: #ffaa40;
   font-family: "NexonMaplestory";
+  font-size: 1.25rem;
   color: #fff;
   text-shadow: 2px 2px 3px rgb(172, 86, 0);
   box-shadow: 0px 5px 0px 0px #a66615;
@@ -95,8 +95,16 @@
   top: 2px;
 }
 
+/* 태블릿 */
+@media (max-width: 768px) {
+  .popupBtn {
+    width: 20vw;
+    font-size: 1.25rem;
+  }
+}
+
 /* 모바일 */
-@media (max-width: 360px) {
+@media (max-width: 376px) {
   .popupBtn {
     justify-content: center;
   }
