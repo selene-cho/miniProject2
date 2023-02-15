@@ -48,6 +48,7 @@
 /* 테스트 하러가기 버튼 - popup open */
 .popupBtn {
   text-decoration: none;
+  text-align: center;
   width: 130px;
   height: 40px;
   margin: 0 auto;
@@ -58,7 +59,7 @@
   height: 100%;
   border-radius: 5px;
   z-index: 1;
-  padding: 7px 20px;
+  padding: 7px;
   background: transparent;
   background-color: #89d8d3;
   background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);

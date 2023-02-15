@@ -10,6 +10,7 @@ function App() {
   const [result, setResult] = useState(0);
   const [frontResult, setFrontResult] = useState(0);
   const [backResult, setBackResult] = useState(0);
+  const [Score, setScore] =useState(8);
 
   /** 질문 답변 임의 데이터 */
   const Data = [
@@ -374,7 +375,7 @@ function App() {
             <Route
               path="/test"
               element={
-                <ResultPage frontResult={frontResult} backResult={backResult} />
+                <ResultPage frontResult={frontResult} backResult={backResult} score={Score} />
               }
             />
           ) : (

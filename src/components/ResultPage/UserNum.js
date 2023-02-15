@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { dbFirestore } from "../../fbase";
-import { doc, updateDoc, deleteDoc, getDoc } from "firebase/firestore";
+import { doc, updateDoc, getDoc } from "firebase/firestore";
 const UserNum = () => {
   const [Num, setNum] = useState(0);
+  // 개인 데이터 베이스 연결
   const docRef = doc(dbFirestore, "Users", "user");
   const docsnap = getDoc(docRef);
   useEffect(() => {
@@ -14,9 +15,9 @@ const UserNum = () => {
     });
   }, []);
   return (
-    <div>
+    <>
       {Num}
-    </div>
+    </>
   );
 };
 
