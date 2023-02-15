@@ -2,6 +2,7 @@
   max-width: 50rem;
   width: 800px;
   border: 0;
+
   /* margin: 1.875rem auto; */
   /* width: 35vw;
   height: 5vh; */
@@ -18,6 +19,7 @@
     0 15px 0 0 #7c563f, 0 15px 0 1px rgba(0, 0, 0, 0.4),
     0 15px 15px 1px rgba(0, 0, 0, 0.5);
   background-color: #f2d388;
+
 }
 
 .answerButton:hover {
@@ -26,9 +28,13 @@
 }
 
 .answerImg {
-  height: 20vh;
-  width: 25vw;
-  margin: 1em 1em 1em 1em;
+  height: 27vh;
+  width: 24.2vw;
+  border-radius: 10px;
+  text-shadow: 2px 2px 3px rgb(172, 86, 0);
+  border: solid 3px;
+  box-shadow: 1px 1px 2px 1px;
+  margin: 0em 1em 1em 1em;
 }
 
 @media (max-width: 320px) {

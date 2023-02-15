@@ -14,12 +14,17 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     font-size: 1.25rem;
+
   }
   button {
     all: unset;
   }
   ol, ul {
     list-style: none;
+  }
+  
+  div{
+    white-space: pre-wrap;
   }
 
   @import url("https://fonts.googleapis.com/css2?family=Jua&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");

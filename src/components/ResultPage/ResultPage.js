@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import styles from "./ResultPage.module.css";
 import ResultList from "./Result_list";
@@ -83,6 +84,7 @@ const ResultPage = ({ frontResult, backResult }) => {
       </div>
     </div>
   );
+
 };
 
 export default ResultPage;

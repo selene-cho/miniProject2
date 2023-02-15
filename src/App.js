@@ -3,13 +3,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./components/MainPage/Main";
 import Routing from "./screens/Routing";
 import ResultPage from "./components/ResultPage/ResultPage";
-
 import { GlobalStyles } from "./contents/styles";
 
 function App() {
   const [result, setResult] = useState(0);
   const [frontResult, setFrontResult] = useState(0);
   const [backResult, setBackResult] = useState(0);
+  const [scoreResult, setScoreResult] = useState(0);
 
   /** 질문 답변 임의 데이터 */
   const Data = [
@@ -26,7 +26,9 @@ function App() {
     },
     {
       id: 2,
+
       question: ["/imageData/img1.png", "하트의 위치는 몇번째인가??"],
+
       answerData: [
         {
           answer: "i=1",
@@ -51,7 +53,9 @@ function App() {
     },
     {
       id: 4,
+
       question: ["/imageData/img2.png", "다음 빈칸에 들어갈 말은?!"],
+
       answerData: [
         {
           answer: "1. HTML",
@@ -133,7 +137,9 @@ function App() {
     },
     {
       id: 10,
+
       question: ["/imageData/img3.jpg", "빈칸에 들어갈 말로 옳은 것은?!"],
+
 
       answerData: [
         {
@@ -222,7 +228,9 @@ function App() {
       question: "다음 단어를 보고 생각나는 이미지를 고르세요.\n<코드>",
       answerData: [
         {
+
           answer: "/imageData/img4.jpeg",
+
 
           type: "0",
         },
@@ -246,7 +254,9 @@ function App() {
         "개발자가 다음 영단어를 보고 먼저 떠오르는 것이 바르게 연결된 것은??",
       answerData: [
         {
+
           answer: "/imageData/img8.jpeg",
+
           type: "0",
         },
         {
@@ -314,21 +324,27 @@ function App() {
       question: "나의 모습과 가장 가까운 이미지를 고르세요.",
       answerData: [
         {
+
           answer: "/imageData/img12.jpeg",
+
 
           type: "1",
         },
         {
+
           answer: "/imageData/img13.jpeg",
           type: "1",
         },
         {
           answer: "/imageData/img14.jpeg",
 
+
           type: "1",
         },
         {
+
           answer: "/imageData/img15.jpeg",
+
 
           type: "1",
         },
@@ -336,20 +352,32 @@ function App() {
     },
   ];
 
+  Data[0].question.replace(/\n/g, `<br/>`);
+  // console.log(Data[0].question);
+
   /**답변한 데이터(data : 현재까지 답변한 답 수, front : 현재까지 답한 프론트 답, back : 현재까지 답한 백엔드 답) */
   const tendencyData = (data) => {
     setResult(data.progress);
+    setScoreResult(data.score);
     setFrontResult(data.front);
     setBackResult(data.back);
   };
 
   console.log(
-    `"data" : ${result}, "front" : ${frontResult}, "back" : ${backResult}`
+    `"data" : ${result}, "score" : ${scoreResult} "front" : ${frontResult}, "back" : ${backResult}`
   );
 
   return (
     /* result(진행도)가 10일때 프로그래스바 & 질문페이지 없애기  */
     <>
+      <audio
+        src="./샛별프로젝트-AM 5.00 (bpm108).mp3"
+        autoPlay
+        loop
+        id="myAudio"
+      >
+        오디오 지원되지 않는 브라우저
+      </audio>
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
@@ -387,196 +415,3 @@ function App() {
 }
 
 export default App;
-
-// import { useState } from "react";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Main from "./components/Main";
-// import Routing from "./UI/Routing";
-// import ResultPage from "./components/ResultPage";
-
-// import { GlobalStyles } from "./contents/styles";
-
-// function App() {
-//   const [result, setResult] = useState(0);
-//   const [frontResult, setFrontResult] = useState(0);
-//   const [backResult, setBackResult] = useState(0);
-
-//   /** 질문 답변 임의 데이터 */
-//   const Data = [
-//     {
-//       id: 1,
-//       question: "question1",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 2,
-//       question: "question2",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 3,
-//       question: "question3",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 4,
-//       question: "question4",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 5,
-//       question: "question5",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 6,
-//       question: "question6",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 7,
-//       question: "question7",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 8,
-//       question: "question8",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 9,
-//       question:
-//         "https://img2.quasarzone.com/editor/2022/01/26/23418c3a40943f6dd3c51249c0edd9bd.png",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//     {
-//       id: 10,
-//       question: "question10",
-//       answerData: [
-//         {
-//           answer: "answer1",
-//           type: "front",
-//         },
-//         { answer: "answer2", type: "back" },
-//       ],
-//     },
-//   ];
-
-//   /**답변한 데이터(data : 현재까지 답변한 답 수, front : 현재까지 답한 프론트 답, back : 현재까지 답한 백엔드 답) */
-//   const tendencyData = (data, front, back) => {
-//     console.log(`"data" : ${data}, "front" : ${front}, "back" : ${back}`);
-//     setResult(data);
-//     setFrontResult(front);
-//     setBackResult(back);
-//   };
-
-//   return (
-//     // <>
-//     //   {/* result(진행도)가 10일때 프로그래스바 & 질문페이지 없애기  */}
-//     // {result === 10 ? (
-//     //   false
-//     // ) : (
-//     //   <>
-//     //     <ProgressBar result={result} />
-//     //     <QuestionPage data={Data} tendencyData={tendencyData} />
-//     //   </>
-//     // )}
-
-//     //   {/* result(진행도)가 10일이고 front답 수와 back답 수에 따른 페이지 보여주기  */}
-//     //   {result === 10 && frontResult > 5 ? (
-//     //     <div>front!!!!</div>
-//     //   ) : result === 10 && backResult > 5 ? (
-//     //     <div>backEnd!!!!!</div>
-//     //   ) : result === 10 ? (
-//     //     <div>none</div>
-//     //   ) : (
-//     //     false
-//     //   )}
-//     // </>
-//     <>
-//       <GlobalStyles />
-//       <BrowserRouter>
-//         <Routes>
-//           <Route path="/" element={<Main />} />
-//           {result === 10 ? (
-//             false
-//           ) : (
-//             <Route
-//               path="/test"
-//               element={
-//                 <Routing
-//                   result={result}
-//                   data={Data}
-//                   tendencyData={tendencyData}
-//                 />
-//               }
-//             />
-//           )}
-
-//           {/* result(진행도)가 10일때 프로그래스바 & 질문페이지 없애기  */}
-//           {result === 10 ? (
-//             <Route path="/test" element={<ResultPage />} />
-//           ) : (
-//             false
-//           )}
-//         </Routes>
-//       </BrowserRouter>
-//     </>
-//   );
-// }
-
-// export default App;
