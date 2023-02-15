@@ -9,7 +9,7 @@
 .goMainBtn {
   font-family: "Jua";
   text-decoration: none;
-  transition: all 1s;
+  transition: all 1.5s;
   text-align: center;
   line-height: 45px;
   width: 100vw;
@@ -26,7 +26,7 @@
   height: 5vh;
   border-radius: 5px;
   color: #4a4452;
-  font-size: 1.25rem;
+  font-size: 1.1vw;
   font-weight: bold;
   z-index: 10;
   transition: all 1.5s;
@@ -46,6 +46,7 @@
   z-index: 5;
   margin-top: 2.5%;
   margin-left: 4%;
+  font-size: 1.1vw;
   background-color: #cb99c5;
 }
 .goMainBtnTop:hover {
@@ -73,14 +74,15 @@ section {
   flex-direction: column;
   align-items: center;
   background-color: #eae0da;
-  padding: 90px 0;
+  padding: 85px 10vw;
 }
+
 .listsBox {
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 50px 0;
   min-height: 250px;
   bottom: 0;
   margin: 0 auto;
@@ -95,10 +97,26 @@ section {
   align-items: center;
 }
 .lists > button {
-  margin: 3%;
-  padding: 40px 50px;
+  margin: 2%;
+  padding: 3vh 2vw;
+  text-align: center;
 }
-
+.questionBox:nth-child(4) {
+  flex-direction: row;
+}
+.questionBox:nth-child(4) .questionTitle,
+.questionBox:nth-child(4) .listsBox {
+  padding: 40px;
+  height: calc(100vh - 120px);
+  justify-content: center;
+}
+.questionBox:nth-child(4) img {
+  width: 35vw;
+  margin: 0 auto;
+}
+.questionBox:nth-child(4) .listsBox .lists {
+  flex-direction: column;
+}
 .questionBox:nth-child(1) {
   display: flex;
   flex-direction: column;
@@ -123,14 +141,14 @@ section {
   width: 350px;
   height: 100%;
 }
+
 .questionBox:nth-child(2) div button,
-.questionBox:nth-child(4) div button,
 .questionBox:nth-child(8) div button,
 .questionBox:nth-child(10) div button,
 .questionBox:nth-child(11) div button,
 .questionBox:nth-child(12) div button,
 .questionBox:nth-child(13) div button {
-  width: 30%;
+  width: 10%;
 }
 
 .questionBox:nth-child(12) div button:nth-child(1) {
@@ -201,6 +219,24 @@ section {
   .questionBox div {
     padding: 2vh 3vw;
   }
+  .questionBox:nth-child(4) {
+    flex-direction: column;
+  }
+  .questionBox:nth-child(4) .questionTitle {
+    padding: 40px;
+    height: calc(100vh - 120px);
+    justify-content: center;
+  }
+  .questionBox:nth-child(4) img {
+    width: 35vw;
+    margin: 0 auto;
+  }
+  .questionBox:nth-child(4) .listsBox {
+    flex-direction: column;
+    height: calc(100vh - 120px);
+    padding: 0;
+  }
+
   .questionBox:nth-child(4) .questionTitle div,
   .questionBox:nth-child(10) .questionTitle div {
     margin: 0 auto;
@@ -226,7 +262,6 @@ section {
   .questionBox:nth-child(18) .questionTitle {
     height: 20vh;
   }
-
   .questionBox:nth-child(14) .listsBox .lists img,
   .questionBox:nth-child(15) .listsBox .lists img,
   .questionBox:nth-child(18) .listsBox .lists img {

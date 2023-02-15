@@ -20,9 +20,9 @@
 }
 .content {
   margin: 20px;
+  font-family: "NexonLv2Gothic";
 }
 .popupContent .startBtn button {
-  /* width: 30vw; */
   height: 40px;
   margin: 15px auto;
   padding: 5px 40px;

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3vw;
   margin-bottom: 20px;
   padding: 2rem 4rem;
   background-color: #f7f5eb;
@@ -18,10 +18,9 @@
 }
 .question {
   text-align: center;
-  /* width: 80%; */
-  font-size: 2.5rem;
+  font-size: 2.5vw;
   margin: 0 auto;
-  padding: 2rem 7rem;
+  padding: 2rem 3rem;
   background-color: #f7f5eb;
   border: 7px solid #65789a;
   border-radius: 20px;
@@ -33,13 +32,13 @@
 @media (max-width: 768px) {
   .question {
     width: 80vw;
-    font-size: 1.25rem;
+    font-size: 3vw;
     padding: 1rem;
     border: 5px solid #65789a;
   }
   .questionImgTitle {
     margin-top: 20vh;
-    font-size: 1.25rem;
+    font-size: 3vw;
   }
   .questionImg {
     margin: 0;

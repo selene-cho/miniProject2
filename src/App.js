@@ -9,7 +9,7 @@ function App() {
   const [result, setResult] = useState(0);
   const [frontResult, setFrontResult] = useState(0);
   const [backResult, setBackResult] = useState(0);
-  const [Score, setScore] =useState(0);
+  const [Score, setScore] = useState(0);
 
   /** 질문 답변 임의 데이터 */
   const Data = [
@@ -351,10 +351,9 @@ function App() {
   /**답변한 데이터(data : 현재까지 답변한 답 수, front : 현재까지 답한 프론트 답, back : 현재까지 답한 백엔드 답) */
   const tendencyData = (data) => {
     setResult(data.progress);
-    setScoreResult(data.score);
     setFrontResult(data.front);
     setBackResult(data.back);
-    setScore(data.score)
+    setScore(data.score);
   };
 
   console.log(
@@ -396,7 +395,11 @@ function App() {
             <Route
               path="/test"
               element={
-                <ResultPage frontResult={frontResult} backResult={backResult} score={Score} />
+                <ResultPage
+                  frontResult={frontResult}
+                  backResult={backResult}
+                  score={Score}
+                />
               }
             />
           ) : (
