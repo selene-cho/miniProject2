@@ -56,7 +56,6 @@
 }
 .popupBtn button {
   position: relative;
-  width: 100%;
   height: 100%;
   border-radius: 5px;
   z-index: 1;
@@ -128,14 +127,39 @@
   font-size: 1em;
 }
 
+a {
+  text-align: center;
+}
+
 /* 모바일 */
 @media (max-width: 768px) {
   .popupBtn {
     justify-content: center;
+    width: 13vw;
+    font-size: 10px;
+  }
+
+  .popupBtn button {
+    position: relative;
+    width: 10vw;
+    right: 20%;
+    height: 3vh;
+    border-radius: 5px;
+    z-index: 1;
+    background: transparent;
+    background-color: #89d8d3;
+    background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+    font-family: "NexonMaplestory";
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 2px rgba(49, 49, 49, 0.482);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.6),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.3), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
   }
 
   .content {
-    margin: 2px;
+    padding: 10px;
   }
 
   .popupDiv {
@@ -149,6 +173,11 @@
 
   .popupDiv div {
     margin: 0;
+  }
+
+  a {
+    text-align: center;
+    margin-top: 20px;
   }
 
   .img {

@@ -1,5 +1,6 @@
 import styles from "./Main.module.css";
 import Popup from "./Popup";
+import UserNum from "../ResultPage/UserNum";
 
 function Main() {
   return (
@@ -13,7 +14,10 @@ function Main() {
           <p>개발세계의 밈, 트렌드에 대해 얼마나 알고 있나요?</p>
         </div>
         <div className={styles.footer}>
-          {/* <CountUser /> */}
+          <div className={styles.userCount}>
+            테스트 참여자 수 : &nbsp;&nbsp;
+            <UserNum className={styles.UserNum} />명
+          </div>
           <Popup />
         </div>
       </div>

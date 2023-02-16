@@ -10,15 +10,10 @@
     0 15px 15px 1px rgba(0, 0, 0, 0.5);
   background-color: #f2d388;
 }
-
-.answerButton:hover {
-  color: rgb(227, 232, 251);
-  background-color: #c98474;
-}
 .answerImg {
-  width: 20vw;
+  width: 10vw;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px 10px rgba(10, 10, 10, 0.708);
+  box-shadow: 1px 1px 10px white;
   margin: 1rem;
 }
 
@@ -42,15 +37,21 @@
 /* 모바일 */
 @media (max-width: 376px) {
   .answerButton {
-    font-size: 0.8125rem;
+    font-size: 1rem;
+    padding: 0;
     width: 80vw;
-    box-shadow: 0 0 0 1px #f3d48b inset,
-      0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 10px 0 0 #7c563f,
-      0 10px 0 1px rgba(0, 0, 0, 0.4), 0 10px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px rgb(61, 94, 137);
   }
   .answerImg {
     margin: 1em 1em 1em 1em;
     width: 30vw;
     height: 25vh;
+  }
+}
+
+@media (hover: hover) {
+  .answerButton:hover {
+    color: rgb(227, 232, 251);
+    background-color: #c98474;
   }
 }

@@ -24,7 +24,7 @@
   padding-top: 50px;
 }
 .mainText {
-  font-family: "NexonLv2Gothic";
+  font-family: "NEXON Lv2 Gothic";
   letter-spacing: 0.0625rem;
   display: flex;
   flex-direction: column;
@@ -39,14 +39,28 @@
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
+  font-family: "NexonMaplestory";
+}
+
+.userCount {
+  background: #ffffff5f;
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+  position: relative;
+  text-align: center;
+  padding: 15px 25px;
+  border-radius: 5px;
+  float: left;
+  left: 0;
+  transform: translate(-150%, 30%);
 }
 
 /* 태블릿 */
-@media (max-width: 769px) {
+@media (max-width: 768px) {
 }
-
+/**/
+@media (max-width: 480px) {
+}
 /* 모바일 */
 @media (max-width: 376px) {
   .mainBg {
@@ -58,6 +72,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    padding: 4rem 0;
   }
   .mainTitle {
     font-size: 1.875rem;
@@ -66,12 +81,27 @@
     letter-spacing: 1px;
   }
   .mainText {
-    font-size: 0.75rem;
+    font-size: 1.1rem;
     width: 80vw;
     background-color: rgba(255, 255, 255, 0.439);
     border-radius: 5px;
-    padding: 10px 0;
+    padding: 10px 5px;
     color: rgb(0, 0, 0);
     font-weight: 400;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .userCount {
+    transform: translate(0);
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border-bottom: 0;
+    font-size: 0.8rem;
   }
 }

@@ -4,14 +4,41 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  height: 32vh;
+  width: 28vw;
+  padding: 10px;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .callToActionDiv input {
   background-color: cornflowerblue;
   color: white;
-  width: 30vw;
+  width: 20vw;
   height: 10vh;
   margin-top: 15px;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .callToActionDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    width: 50vw;
+  }
+
+  .callToActionDiv input {
+    background-color: cornflowerblue;
+    color: white;
+    width: 40vw;
+    height: 5vh;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
 }

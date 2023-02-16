@@ -269,7 +269,7 @@ function App() {
           type: "0",
         },
         {
-          answer: ["/imageData/img10.jpeg"],
+          answer: ["/imageData/img10.jpg"],
           type: "1",
         },
         {
@@ -329,19 +329,19 @@ function App() {
       question: ["나의 모습과 가장 가까운 이미지를 고르세요."],
       answerData: [
         {
-          answer: ["/imageData/img12.jpeg"],
+          answer: ["/imageData/img12.png"],
           type: "1",
         },
         {
-          answer: ["/imageData/img13.jpeg"],
+          answer: ["/imageData/img13.png"],
           type: "1",
         },
         {
-          answer: ["/imageData/img14.jpeg"],
+          answer: ["/imageData/img14.png"],
           type: "1",
         },
         {
-          answer: ["/imageData/img15.jpeg"],
+          answer: ["/imageData/img15.png"],
           type: "1",
         },
       ],

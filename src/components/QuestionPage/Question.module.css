@@ -18,7 +18,7 @@
 }
 .question {
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 2vw;
   margin: 0 auto;
   padding: 2rem 3rem;
   background-color: #f7f5eb;
@@ -37,8 +37,8 @@
     border: 5px solid #65789a;
   }
   .questionImgTitle {
-    margin-top: 20vh;
-    font-size: 3vw;
+    font-size: 5vw;
+    padding: 10px 15px;
   }
   .questionImg {
     margin: 0;

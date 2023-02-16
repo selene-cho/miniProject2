@@ -25,5 +25,7 @@ export const GlobalStyles = createGlobalStyle`
   #root {
     white-space: pre-line;
   }
-  
+  body {
+    font-family: "NexonLv2Gothic", "Montserrat", "sans-serig
+  };
 `;
