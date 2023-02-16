@@ -16,7 +16,7 @@ const QuestionPage = ({ data, tendencyData }) => {
     const type = target.value;
 
     /**답변에 대한 데이터 쌓아주기 */
-    setProgress(progress => progress + 1);
+    setProgress((progress) => progress + 1);
     if (type === "front") {
       setFront((front) => front + 1);
     } else if (type === "back") {
@@ -27,8 +27,7 @@ const QuestionPage = ({ data, tendencyData }) => {
 
     /** 클릭한 창 닫고 다음 창 display flex해주기 */
     const questionData = target.parentElement.parentElement.parentNode;
-    const questionTest =
-      target.parentElement.parentElement.parentElement.nextSibling;
+    const questionTest = target.parentElement.parentElement.nextSibling;
     console.log("1", questionData);
     console.log("2", questionTest);
 
@@ -42,17 +41,14 @@ const QuestionPage = ({ data, tendencyData }) => {
     score: score,
     front: front,
     back: back,
-    score: score
+    score: score,
   };
 
   /**상위 컴포넌트에 변경된 값 보내주기 */
-  useEffect(
-    () => {
-      tendencyData(newAnswerData);
-      return () => {};
-    },
-    [newAnswerData]
-  );
+  useEffect(() => {
+    tendencyData(newAnswerData);
+    return () => {};
+  }, [newAnswerData]);
 
   console.log(data);
 
@@ -69,32 +65,30 @@ const QuestionPage = ({ data, tendencyData }) => {
       </header>
 
       {/* 질문페이지 구현 */}
-      <section>
-        {data.map((d) => {
-          return (
-            <div className={styles.questionBox} key={d.id}>
-              <div className={styles.questionTitle}>
-                <Question d={d} />
-              </div>
+      {data.map((d) => {
+        return (
+          <div className={styles.questionBox} key={d.id}>
+            <div className={styles.questionTitle}>
+              <Question d={d} />
+            </div>
 
-              {/* 응답 버튼 */}
-              <div className={styles.listsBox}>
-                <div className={styles.lists}>
-                  {d.answerData.map((a) => {
-                    return (
-                      <AnswerBtn
-                        key={Math.random()}
-                        a={a}
-                        answerHandler={answerHandler}
-                      />
-                    );
-                  })}
-                </div>
+            {/* 응답 버튼 */}
+            <div className={styles.listsBox}>
+              <div className={styles.lists}>
+                {d.answerData.map((a) => {
+                  return (
+                    <AnswerBtn
+                      key={Math.random()}
+                      a={a}
+                      answerHandler={answerHandler}
+                    />
+                  );
+                })}
               </div>
             </div>
-          );
-        })}
-      </section>
+          </div>
+        );
+      })}
     </div>
   );
 };

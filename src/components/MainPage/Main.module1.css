@@ -1,0 +1,107 @@
+.mainBg {
+  width: 100vw;
+  background-image: url(../../contents/images/amusement_park.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  justify-content: center;
+}
+.mainContents {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 750px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 6.25rem 0;
+}
+.mainTitle {
+  font-family: "NexonMaplestory";
+  font-weight: bold;
+  font-size: 3.125rem;
+  text-shadow: 2px 2px 3px rgb(255, 255, 255);
+  padding-top: 50px;
+}
+.mainText {
+  font-family: "NEXON Lv2 Gothic";
+  letter-spacing: 0.0625rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.439);
+  border-radius: 10px;
+}
+.mainText p {
+  margin: 3px 0;
+}
+
+.footer {
+  font-family: "NexonMaplestory";
+}
+
+.userCount {
+  background: #ffffff5f;
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+  position: relative;
+  text-align: center;
+  padding: 15px 25px;
+  border-radius: 5px;
+  float: left;
+  left: 0;
+  transform: translate(-150%, 30%);
+}
+
+/* 태블릿 */
+@media (max-width: 768px) {
+}
+/**/
+@media (max-width: 480px) {
+}
+/* 모바일 */
+@media (max-width: 376px) {
+  .mainBg {
+    background-position: 55%;
+  }
+  .mainContents {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 4rem 0;
+  }
+  .mainTitle {
+    font-size: 1.875rem;
+    padding: 50px 40px;
+    width: 100vw;
+    letter-spacing: 1px;
+  }
+  .mainText {
+    font-size: 1.1rem;
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.439);
+    border-radius: 5px;
+    padding: 10px 5px;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .userCount {
+    transform: translate(0);
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border-bottom: 0;
+    font-size: 0.8rem;
+  }
+}

@@ -3,8 +3,8 @@ import horse from "../contents/images/horse.png";
 
 const ProgressBox = styled.div`
   position: relative;
-  width: 100vw;
-  height: 120px;
+  width: 100%;
+  height: 10%;
   background-color: #eac7c7;
 `;
 const Progress = styled.div`
