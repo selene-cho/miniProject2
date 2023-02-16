@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import styles from "./KakaoShareButton.module.css";
 const KakaoShareButton = () => {
+  const URL = window.location.href.slice(0, -5);
+  console.log(URL);
   useEffect(() => {
     createKakaoButton();
   }, []);
@@ -19,31 +21,21 @@ const KakaoShareButton = () => {
         objectType: "feed",
         content: {
           title: "타이틀",
-          description: "#리액트 #카카오 #공유버튼",
-          imageUrl: "IMAGE_URL", // i.e. process.env.FETCH_URL + '/logo.png'
+          description: "개발자가 되고싶은 당신! 개발자 놀이공원에서 당신의 능력을 시험해 보세요!",
+          imageUrl:
+            "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FBZRmm%2FbtrmY5fd4fP%2FHoFI0JpATA9kaaPvUq30Yk%2Fimg.jpg", // i.e. process.env.FETCH_URL + '/logo.png'
           link: {
-            mobileWebUrl: window.location.href,
-            webUrl: window.location.href
+            mobileWebUrl: URL,
+            webUrl: URL
           }
         },
-        social: {
-          likeCount: 77,
-          commentCount: 55,
-          sharedCount: 333
-        },
+
         buttons: [
           {
             title: "웹으로 보기",
             link: {
-              mobileWebUrl: window.location.href,
-              webUrl: window.location.href
-            }
-          },
-          {
-            title: "앱으로 보기",
-            link: {
-              mobileWebUrl: window.location.href,
-              webUrl: window.location.href
+              mobileWebUrl: URL,
+              webUrl: URL
             }
           }
         ]

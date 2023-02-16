@@ -4,7 +4,7 @@ import ResultList from "./Result_list";
 import Spinner from "../../contents/images/Loading_img.gif";
 import OtherPopup from "./OtherPopup";
 import KakaoShareButton from "./KakaoShareButton";
-import UserNum from "./UserNum";
+// import UserNum from "./UserNum";
 import CallToAction from "./CallToAction";
 import {
   FacebookShareButton,
@@ -19,8 +19,7 @@ const ResultPage = ({ frontResult, backResult, score }) => {
   const [Loading, setLoading] = useState(true);
   const [Data, setData] = useState({});
   const [Type, setType] = useState("none");
-  // const [Num, setNum] = useState(0);
-  const [Img, setImg] = useState("");
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -60,14 +59,8 @@ const ResultPage = ({ frontResult, backResult, score }) => {
     },
     [Data]
   );
-  useEffect(
-    () => {
-      setImg(Data.img);
-    },
-    [Type, Img]
-  );
 
-  const currentUrl = window.location.href;
+  const currentUrl = window.location.href.slice(0, -5);
 
   return Loading
     ? <div
@@ -96,7 +89,7 @@ const ResultPage = ({ frontResult, backResult, score }) => {
         <div className={styles.ResultIMG}>
           <div className={styles.ResultContents}>
             <div className={styles.img_name}>
-              <img src={Img} alt="이미지" />
+              <img src={Data.img} alt="이미지" />
               <div className={styles.TestResult}>
                 <p>
                   front 성향: {frontResult * 10}%
