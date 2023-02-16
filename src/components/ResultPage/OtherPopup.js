@@ -13,39 +13,56 @@ const OtherPopup = () => {
       <div className={styles.popupBtn}>
         <button onClick={popupClick}>모든결과보기</button>
       </div>
-      {showPopup && (
+      {showPopup &&
         <div className={styles.popupOverlay}>
           <div className={styles.popupContent}>
             <div className={styles.content}>
-              {ResultList.back.map((back) => {
+              {ResultList.back.map(back => {
                 return (
                   <div key={back.type} className={styles.popupDiv}>
-                    <img src={back.img} className={styles.img} alt=""></img>
+                    <img src={back.img} className={styles.img} alt="" />
                     <div>
-                      <div>{back.TypeName}</div>
-                      <div>{back.Describtion}</div>
+                      <div>
+                        {back.type}
+                        {back.TypeName}
+                      </div>
+
+                      <div>
+                        {back.Describtion}
+                      </div>
                     </div>
                   </div>
                 );
               })}
-              {ResultList.front.map((front) => {
+              {ResultList.front.map(front => {
                 return (
                   <div key={front.type} className={styles.popupDiv}>
-                    <img src={front.img} className={styles.img} alt=""></img>
+                    <img src={front.img} className={styles.img} alt="" />
                     <div>
-                      <div>{front.TypeName}</div>
-                      <div>{front.Describtion}</div>
+                      <div>
+                        {front.type}
+                        {front.TypeName}
+                      </div>
+                      <div>
+                        {front.Describtion}
+                      </div>
                     </div>
                   </div>
                 );
               })}
-              {ResultList.full.map((full) => {
+              {ResultList.full.map(full => {
                 return (
                   <div key={full.type} className={styles.popupDiv}>
-                    <img src={full.img} className={styles.img} alt=""></img>
+                    <img src={full.img} className={styles.img} alt="" />
                     <div>
-                      <div>{full.TypeName}</div>
-                      <div>{full.Describtion}</div>
+                      <div>
+                        {full.type}
+
+                        {full.TypeName}
+                      </div>
+                      <div>
+                        {full.Describtion}
+                      </div>
                     </div>
                   </div>
                 );
@@ -61,8 +78,7 @@ const OtherPopup = () => {
               </button>
             </a>
           </div>
-        </div>
-      )}
+        </div>}
     </div>
   );
 };
