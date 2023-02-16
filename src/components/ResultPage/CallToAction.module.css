@@ -4,41 +4,30 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 10px;
-  border-radius: 20px;
-  height: 32vh;
-  width: 28vw;
-  padding: 10px;
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px;
 }
 
 .callToActionDiv input {
-  background-color: cornflowerblue;
+  background-color: #89d8d3;
   color: white;
-  width: 20vw;
-  height: 10vh;
+  width: 78%;
+  height: 7vh;
   margin-top: 15px;
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width : 768px) {
+  
   .callToActionDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 13px;
-    width: 50vw;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 8px;
+  }
+  .callToActionDiv div{
+    display: none;
   }
 
   .callToActionDiv input {
-    background-color: cornflowerblue;
-    color: white;
-    width: 40vw;
-    height: 5vh;
-    margin-top: 15px;
-    border-radius: 10px;
-  }
+    height: 7vh;
+}
 }

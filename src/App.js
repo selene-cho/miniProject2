@@ -4,6 +4,7 @@ import Main from "./components/MainPage/Main";
 import Routing from "./screens/Routing";
 import ResultPage from "./components/ResultPage/ResultPage";
 import { GlobalStyles } from "./contents/styles";
+import TeamPage from "./components/ResultPage/TeamPage";
 
 function App() {
   const [result, setResult] = useState(0);
@@ -405,6 +406,7 @@ function App() {
           ) : (
             false
           )}
+          <Route path="/teampage" element={<TeamPage/>}/>
         </Routes>
       </BrowserRouter>
     </>

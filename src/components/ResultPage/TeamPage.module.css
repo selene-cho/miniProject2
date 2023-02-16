@@ -1,0 +1,70 @@
+.teamDiv {
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.introDiv {
+  border-radius: 10px;
+  width: 27vw;
+  height: 50vh;
+  background-color: aliceblue;
+  padding: 10%;
+  margin: 20px;
+}
+
+.teamName {
+  background-color: aquamarine;
+  margin-top: -50px;
+  border-radius: 20px;
+  width: 50%;
+  height: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.teamImg {
+  width: 100%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+.socialImg {
+  width: 30px;
+  margin: 2px;
+  /* margin: 10px 5px 0px 5px; */
+}
+
+@media screen and (max-width: 768px) {
+  .teamDiv {
+    flex-direction: column;
+  }
+
+  .introDiv {
+    border-radius: 10px;
+    width: 65vw;
+    height: 50vh;
+    background-color: aliceblue;
+    padding: 10px;
+    /* margin: 10vh; */
+  }
+
+  .teamDiv {
+    height: 100%;
+    padding: 20px;
+  }
+
+  .teamImg {
+    width: 93%;
+    height: 87%;
+    border-radius: 10px;
+  }
+}
