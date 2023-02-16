@@ -9,7 +9,7 @@ const QuestionPage = ({ data, tendencyData }) => {
   const [progress, setProgress] = useState(0);
   const [front, setFront] = useState(1);
   const [back, setBack] = useState(1);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(2);
 
   /**답변 클릭시 로직 */
   function answerHandler({ target }) {
@@ -18,11 +18,11 @@ const QuestionPage = ({ data, tendencyData }) => {
     /**답변에 대한 데이터 쌓아주기 */
     setProgress((progress) => progress + 1);
     if (type === "front") {
-      setFront((front) => front + 1);
+      setFront(front => front + 1);
     } else if (type === "back") {
-      setBack((back) => back + 1);
+      setBack(back => back + 1);
     } else if (type === "1") {
-      setScore((score) => score + 1);
+      setScore(score => score + 1);
     }
 
     /** 클릭한 창 닫고 다음 창 display flex해주기 */
@@ -65,6 +65,7 @@ const QuestionPage = ({ data, tendencyData }) => {
       </header>
 
       {/* 질문페이지 구현 */}
+<<<<<<< HEAD
       {data.map((d) => {
         return (
           <div className={styles.questionBox} key={d.id}>
@@ -84,6 +85,29 @@ const QuestionPage = ({ data, tendencyData }) => {
                     />
                   );
                 })}
+=======
+      <section>
+        {data.map(d => {
+          return (
+            <div className={styles.questionBox} key={d.id}>
+              <div className={styles.questionTitle}>
+                <Question d={d} />
+              </div>
+
+              {/* 응답 버튼 */}
+              <div className={styles.listsBox}>
+                <div className={styles.lists}>
+                  {d.answerData.map(a => {
+                    return (
+                      <AnswerBtn
+                        key={Math.random()}
+                        a={a}
+                        answerHandler={answerHandler}
+                      />
+                    );
+                  })}
+                </div>
+>>>>>>> e52a3d209911293147225e5cd4358390fb28de7e
               </div>
             </div>
           </div>
