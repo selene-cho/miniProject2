@@ -18,9 +18,9 @@ const CallToAction = () => {
 
   return (
     <div className={styles.callToActionDiv}>
-      <div>
+      <p>
         {textData.content}
-      </div>
+      </p>
       <input type="button" onClick={ozBtnHandler} value={textData.ozCoding} />
       <input type="button" onClick={teamBtnHandler} value={textData.team} />
     </div>
